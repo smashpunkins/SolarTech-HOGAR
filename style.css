@@ -1,0 +1,450 @@
+:root {
+    --bg-cloud: #F0F9FF;
+    --sky-blue: #0EA5E9;
+    --text-navy: #0F172A;
+    --cta-orange: #F59E0B;
+    --white: #FFFFFF;
+    --gray-light: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: #E2E8F0; 
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px; /* Reducido para móviles */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--white); /* Fondo base más limpio */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    border-radius: 8px; /* Pequeño borde redondeado general */
+    overflow: hidden;
+}
+
+.img-fill { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-fit { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.btn-cta {
+    background-color: var(--cta-orange);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(245, 158, 11, 0.2);
+}
+
+.btn-cta:hover {
+    background-color: #D97706;
+    transform: translateY(-2px);
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo { font-size: 22px; font-weight: 800; color: var(--text-navy); }
+
+.nav-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-navy);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--sky-blue); }
+
+/* === HERO MEJORADO === */
+.hero {
+    position: relative;
+    width: 100%;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-cloud);
+}
+
+.hero-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1; opacity: 0.15; /* Más sutil para mejor lectura */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 320px; /* Formato de columnas estable */
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text { text-align: left; }
+
+.hero h1 {
+    color: var(--text-navy);
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #334155;
+    margin-bottom: 25px;
+}
+
+.checklist { list-style: none; }
+.checklist li {
+    color: var(--text-navy);
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.checklist li::before {
+    content: "✓"; 
+    background-color: var(--sky-blue);
+    color: white;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 12px;
+    margin-right: 12px;
+}
+
+/* Formulario arreglado (Ya no usa absolute) */
+.quote-form {
+    background-color: var(--white);
+    border-top: 4px solid var(--sky-blue);
+    border-radius: 8px;
+    padding: 30px 25px; 
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+}
+
+.form-header h3 { color: var(--text-navy); font-size: 18px; text-align: center; margin-bottom: 20px; }
+.quote-form input {
+    width: 100%; padding: 12px 15px; margin-bottom: 15px;
+    border: 1px solid #CBD5E1; border-radius: 6px;
+    background-color: #F8FAFC;
+    font-size: 14px;
+}
+
+.divider {
+    display: flex; align-items: center; margin: 40px;
+}
+.divider span { padding-right: 20px; color: var(--sky-blue); font-size: 16px; font-weight: bold; }
+.divider .line { flex-grow: 1; height: 1px; background-color: #E2E8F0; }
+
+/* === BENEFICIOS === */
+.benefits-section { padding: 0 40px; margin-bottom: 50px; scroll-margin-top: 100px; }
+.section-title { color: var(--text-navy); font-size: 24px; margin-bottom: 25px; }
+
+.benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+}
+
+.benefit-card {
+    background-color: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden; cursor: pointer; transition: all 0.3s ease;
+}
+.benefit-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); border-color: var(--sky-blue); }
+
+.card-main-content { display: flex; align-items: center; padding: 15px; min-height: 120px; }
+.img-container { width: 70px; height: 70px; flex-shrink: 0; background-color: var(--bg-cloud); border-radius: 50%; padding: 10px; margin-right: 15px; }
+.card-text h4 { font-size: 14px; color: var(--text-navy); margin-bottom: 5px; }
+.card-text p { font-size: 12px; color: #64748B; }
+.card-text strong { color: var(--sky-blue); font-size: 11px; margin-top: 5px; display: inline-block; }
+
+.extra-content { max-height: 0; opacity: 0; transition: all 0.4s ease; overflow: hidden; background-color: var(--bg-cloud); }
+.benefit-card.active .extra-content { max-height: 200px; opacity: 1; padding: 15px; border-top: 1px solid #E2E8F0; }
+.extra-content p { font-size: 13px; color: var(--text-navy); line-height: 1.6; }
+
+/* === VENTAJAS === */
+.ventajas-section { 
+    margin: 0 40px 50px; padding: 40px 30px; 
+    background-color: var(--text-navy); /* Contraste fuerte para romper monotonía */
+    border-radius: 12px; 
+}
+.ventajas-section .box-title { color: var(--white); margin-bottom: 25px; }
+.ventajas-tags { 
+    display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; 
+}
+.tag-item { 
+    background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); 
+    color: var(--white); padding: 10px 20px; border-radius: 30px; 
+    font-size: 14px; font-weight: 500; transition: all 0.3s;
+}
+.tag-item:hover { background-color: var(--sky-blue); transform: scale(1.05); }
+
+/* === SECCIÓN INFERIOR === */
+.bottom-section { 
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; 
+    padding: 0 40px 40px; scroll-margin-top: 100px;
+}
+
+.box-title { color: var(--text-navy); font-size: 18px; margin-bottom: 20px; font-weight: 700; }
+.comments-box { background-color: var(--bg-cloud); border-radius: 12px; padding: 30px; }
+
+.testimonial {
+    display: flex; align-items: flex-start; background: var(--white); 
+    border-radius: 8px; padding: 15px; margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.avatar-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--sky-blue);
+    margin-right: 15px;
+    flex-shrink: 0;
+
+    /* CLAVE */
+    overflow: hidden;
+    position: relative;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.testimonial-text p { font-size: 13px; color: #475569; margin-top: 5px; font-style: italic; }
+
+.right-boxes { display: flex; flex-direction: column; gap: 20px; }
+.asesoria-box, .contacto-box { 
+    background-color: var(--white); border: 1px solid #E2E8F0; 
+    border-radius: 12px; padding: 25px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.contact-info p { font-size: 14px; margin-bottom: 10px; color: #334155; }
+
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+    padding: 20px 40px; 
+    background-color: var(--text-navy); 
+    color: var(--white);
+    gap: 20px;
+}
+
+.footer-left { 
+    font-size: 13px; 
+    color: #94A3B8; 
+}
+
+.footer-right { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center; 
+}
+
+/* Contenedor de iconos sociales */
+.social-icon { 
+    width: 32px;      /* Tamaño fijo del círculo */
+    height: 32px;     /* Tamaño fijo del círculo */
+    border-radius: 50%; 
+    overflow: hidden; /* Corta cualquier cosa que se salga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Contenedor del logo en el footer */
+.logo-slot { 
+    width: 100px;     /* Ancho máximo del logo en footer */
+    height: 40px;     /* Alto máximo del logo en footer */
+    overflow: hidden; /* Corta cualquier cosa que se salga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Escalar todas las imágenes del footer */
+.social-icon img, 
+.logo-slot img { 
+    width: 100%;      /* Se estira al ancho del contenedor */
+    height: 100%;     /* Se estira al alto del contenedor */
+    object-fit: contain; /* ESCALA la imagen para que quepa sin deformarse */
+    display: block;
+}
+
+/* =========================================================
+   DISEÑO RESPONSIVO (Ajuste a Celulares y Tablets)
+   Esto soluciona el problema de compatibilidad.
+   ========================================================= */
+
+@media (max-width: 850px) {
+    /* Hero pasa a 1 sola columna en pantallas medianas */
+    .hero-content { grid-template-columns: 1fr; gap: 30px; }
+    .hero { padding: 40px 20px; }
+    .hero h1 { font-size: 28px; }
+    .quote-form { max-width: 400px; margin: 0 auto; }
+    
+    /* Beneficios a 2 columnas */
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Sección inferior a 1 columna */
+    .bottom-section { grid-template-columns: 1fr; }
+}
+/* === MODAL / POP-UP DE CONTACTO RÁPIDO === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.8); /* Fondo oscuro semitransparente */
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculto por defecto */
+    pointer-events: none; /* No se puede hacer clic cuando está oculto */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+    opacity: 1; /* Visible cuando tiene la clase 'active' */
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    transform: scale(0.9); /* Efecto de aparición */
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h2 {
+    color: var(--text-navy);
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.modal-content p {
+    color: #475569;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    background-color: #F8FAFC;
+    font-size: 15px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #94A3B8;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--text-navy);
+}
+
+
+/* === ESTILOS PARA LOGO EN LA BARRA DE NAVEGACIÓN === */
+.logo {
+    display: flex;         /* Pone el logo y el texto en una línea */
+    align-items: center;   /* Los alinea verticalmente */
+    gap: 12px;             /* Añade un espacio entre el logo y el texto */
+}
+
+.logo img {
+    height: 40px;          /* Define la altura del logo */
+    border-radius: 50%;    /* Lo hace circular (opcional) */
+}
+
+.logo span {
+    font-size: 22px; 
+    font-weight: 800; 
+    color: var(--text-navy); 
+}
+
+
+/* === ESTILOS PARA LOGO EN EL POP-UP === */
+.modal-logo-container {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    margin-bottom: 15px;     /* Crea un espacio debajo del logo */
+}
+
+.modal-logo-container img {
+    height: 60px;            /* Un poco más grande para el pop-up */
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--sky-blue); /* Un borde con el color del tema */
+}
+
+@media (max-width: 600px) {
+    /* Ajustes para celulares pequeños */
+    .navbar { flex-direction: column; padding: 15px; gap: 15px; }
+    .nav-links { justify-content: center; }
+    
+    /* Beneficios a 1 sola columna */
+    .benefits-grid { grid-template-columns: 1fr; }
+    
+    .benefits-section, .bottom-section, .ventajas-section { padding-left: 20px; padding-right: 20px; margin-left: 0; margin-right: 0;}
+    
+    footer { flex-direction: column; gap: 20px; text-align: center; }
+}

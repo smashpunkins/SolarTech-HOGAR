@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarTech HOGAR</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="https://i.imgur.com/6hoi2zU.png">
+</head>
+<body>
+
+    <div class="container">
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav class="navbar">
+       
+            <div class="logo">
+                <!-- logo -->
+                <img src="https://i.imgur.com/6hoi2zU.png" alt="Logo de SolarTech">
+                <span>SolarTech HOGAR</span>
+            </div>
+            <!-- ======================================= -->
+            <div class="nav-links">
+                <a href="#">INICIO</a>
+                <a href="#beneficios">BENEFICIOS</a>
+                <a href="#asesoria">ASESORÍA</a>
+                <a href="#contacto">CONTACTO</a>
+                <button class="btn-cta open-modal-btn" style="padding: 6px 15px;">COTIZAR</button>
+            </div>
+        </nav>
+
+        <!-- SECCIÓN HERO -->
+        <header class="hero">
+            <div class="hero-bg"><img src="https://i.imgur.com/xSiDBtO.jpeg" class="img-fill" alt="Fondo paneles solares"></div> 
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>SOLUCIONES ENERGÉTICAS<br>PARA EL HOGAR</h1>
+                    <p class="subtitle">Independencia Energética y Ahorro para tu familia.</p>
+                    <ul class="checklist">
+                        <li>Reducción de costos</li>
+                        <li>Sostenibilidad</li>
+                        <li>Valorización del inmueble</li>
+                        <li>Independencia total</li>
+                    </ul>
+                </div>
+                
+                <div class="quote-form">
+                    <form id="main-quote-form" novalidate>
+                        <div class="form-header"><h3>SOLICITA UNA<br>COTIZACIÓN COMPLETA</h3></div>
+                        <input type="text" name="Nombre" placeholder="Tu Nombre" required>
+                        <input type="tel" name="Telefono" placeholder="Tu Teléfono" required>
+                        <input type="email" name="Email" placeholder="Tu E-mail" required>
+                        <button type="submit" class="btn-cta" style="width:100%; height:45px;">ENVIAR DATOS</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!--  CONTENIDO -->
+        <div class="divider">
+            <span>"TU CONTROL, TU LIBERTAD ENERGÉTICA"</span>
+            <div class="line"></div>
+        </div>
+        <section class="benefits-section" id="beneficios">
+            <h2 class="section-title">NUESTROS BENEFICIOS</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" onclick="toggleCard(this)">
+                    <div class="card-main-content">
+                        <div class="img-container"><img src="https://i.imgur.com/G3Ep2kc.png" class="img-fit" alt="Impacto Ambiental"></div>
+                        <div class="card-text">
+                            <h4>IMPACTO AMBIENTAL</h4>
+                            <p class="preview-text">Reducción de CO2.<br>Menor contaminación.<br><strong>(Toca para ver más)</strong></p>
+                        </div>
+                    </div>
+                    <div class="extra-content"><p>La energía solar reduce significativamente el impacto ambiental.</p></div>
+                </div>
+                <div class="benefit-card" onclick="toggleCard(this)">
+                    <div class="card-main-content">
+                        <div class="img-container"><img src="https://i.imgur.com/Qk5qy26.png" class="img-fit" alt="Ahorro"></div>
+                        <div class="card-text">
+                            <h4>AHORRO ECONÓMICO</h4>
+                            <p class="preview-text">Reducción de costos.<br>Ahorro garantizado.<br><strong>(Toca para ver más)</strong></p>
+                        </div>
+                    </div>
+                    <div class="extra-content"><p>El uso de paneles solares permite reducir el consumo de energía eléctrica de la red.</p></div>
+                </div>
+                <div class="benefit-card" onclick="toggleCard(this)">
+                    <div class="card-main-content">
+                        <div class="img-container"><img src="https://i.imgur.com/UjdbPyR.png" class="img-fit" alt="Bajo Mantenimiento"></div>
+                        <div class="card-text">
+                            <h4>MANTENIMIENTO</h4>
+                            <p class="preview-text">Sistema robusto,<br>fácil y duradero.<br><strong>(Toca para ver más)</strong></p>
+                        </div>
+                    </div>
+                    <div class="extra-content"><p>Los paneles solares requieren poco mantenimiento. Solo necesitan limpieza ocasional.</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="ventajas-section" id="ventajas">
+            <h3 class="box-title" style="text-align: center;">¿POR QUÉ ELEGIR ENERGÍA SOLAR?</h3>
+            <div class="ventajas-tags">
+                <span class="tag-item">☀️ Energía renovable</span><span class="tag-item">💰 Ahorro económico</span><span class="tag-item">🌍 Reduce la contaminación</span><span class="tag-item">🛠️ Bajo mantenimiento</span><span class="tag-item">📈 Valoriza tu propiedad</span><span class="tag-item">⚡ Independencia energética</span>
+            </div>
+        </section>
+        <section class="bottom-section">
+            <div class="comments-box">
+                <h3 class="box-title">LO QUE DICEN NUESTROS CLIENTES</h3>
+                <div class="testimonial">
+                    <div class="avatar-container"><img src=https://i.imgur.com/pm75Lad.png" class="img-fill" alt="Usuario 1"></div>
+                    <div class="testimonial-text"><strong>Carlos M.</strong><p>"He ahorrado muchísimo en mis facturas mensuales."</p></div>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar-container"><img src="https://i.imgur.com/uzqMZG9.png" class="img-fill" alt="Usuario 2"></div>
+                    <div class="testimonial-text"><strong>Ana G.</strong><p>"Ya no me preocupo por los cortes de energía."</p></div>
+                </div>
+                <div class="testimonial">
+                    <div class="avatar-container"><img src="https://i.imgur.com/7YLfcdl.png" class="img-fill" alt="Usuario 3"></div>
+                    <div class="testimonial-text"><strong>Luis P.</strong><p>"La inversión se paga sola, cambió mi vida."</p></div>
+                </div>
+            </div>
+            <div class="right-boxes">
+                <div class="asesoria-box" id="asesoria">
+                    <h3 class="box-title">ASESORÍA PERSONALIZADA</h3>
+                    <p style="font-size:14px; margin-bottom:15px; color: #475569;">Te llamamos para analizar tu consumo y diseñar el sistema ideal para tu hogar.</p>
+                    <button class="btn-cta open-modal-btn" style="width: 100%; height: 45px;">SOLICITAR ESTUDIO GRATUITO</button>
+                </div>
+                <div class="contacto-box" id="contacto">
+                    <h3 class="box-title">CONTÁCTANOS</h3>
+                    <div class="contact-info">
+                        <p>📍 <strong>Ubicación:</strong> Bogotá D.C.</p><p>📞 <strong>Teléfono:</strong> 601 378 4312</p><p>✉️ <strong>Email:</strong> solartechhogar@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-left">© 2026 SolarTech HOGAR - Todos los derechos reservados</div>
+            <div class="footer-right">
+                <div class="social-icon"><img src="https://i.imgur.com/x0pVmy1.png" class="img-fill" alt="Facebook"></div>
+                <div class="social-icon"><img src="https://i.imgur.com/WI5J4V9.png" class="img-fill" alt="X/Twitter"></div>
+                <div class="social-icon"><img src="https://i.imgur.com/5FyW2Uf.png" class="img-fill" alt="Instagram"></div>
+                <div class="logo-slot"><img src="https://i.imgur.com/6hoi2zU.png" class="img-fill" alt="Logo Footer"></div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- POP-UP -->
+    <div class="modal-overlay" id="quick-contact-modal">
+        <div class="modal-content">
+            <!-- ===== CAMBIO AQUÍ: LOGO AÑADIDO ===== -->
+            <div class="modal-logo-container">
+                 <!-- logo -->
+                <img src="https://i.imgur.com/6hoi2zU.png" alt="Logo de SolarTech">
+            </div>
+            <!-- ======================================= -->
+            <button class="close-btn">&times;</button>
+            <h2>Contacto Rápido</h2>
+            <p>Déjanos tu nombre y teléfono y un asesor te llamará de inmediato.</p>
+            <input type="text" id="modal-name" placeholder="Escribe tu nombre completo" required>
+            <input type="tel" id="modal-phone" placeholder="Escribe tu número de teléfono" required>
+            <button class="btn-cta" id="modal-send-btn" style="width:100%; height:45px;">QUIERO QUE ME LLAMEN</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
